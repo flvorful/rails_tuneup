@@ -1,0 +1,13 @@
+<div id='tuneup-data'>
+  <div id='tuneup-top'>
+    <div id='tuneup-summary'>
+      <%= tuneup_bar(tuneup_data.children.first, :id => 'tuneup-root-bar') %>
+      <%= trend %> <%= tuneup_data.time.to_i %> ms 
+    </div>
+  </div>
+  <%= render :partial => 'schema.html.erb' %>
+  <ul id="tuneup-details">
+    <%= render :partial => 'step.html.erb', :collection => tuneup_data.children %>
+		<li style="clear:both"></li>
+  </ul>
+</div>
